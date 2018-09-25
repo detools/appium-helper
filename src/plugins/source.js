@@ -4,10 +4,11 @@ import fs from 'fs'
 export default async function () {
   const content = await this.driver.getSource()
 
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     const pathToLog = path.resolve(process.cwd(), 'appium_source.xml')
     fs.writeFile(pathToLog, content, 'utf8', (error) => {
       if (error) {
+        /* eslint-disable no-console */
         console.log('---------------------------------------------------')
         console.log('Failed to save source:', error)
         console.log('---------------------------------------------------')

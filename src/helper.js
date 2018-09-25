@@ -3,6 +3,7 @@ import plugins from './plugins'
 
 class Helper {
   driver = null
+
   config = {}
 
   constructor() {

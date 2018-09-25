@@ -1,14 +1,14 @@
-# Tipsi Appium Helper
+# Appium Helper
 
-[![npm version](https://img.shields.io/npm/v/tipsi-appium-helper.svg?style=flat-square)](https://www.npmjs.com/package/tipsi-appium-helper)
-[![build status](https://img.shields.io/travis/tipsi/tipsi-appium-helper/master.svg?style=flat-square)](https://travis-ci.org/tipsi/tipsi-appium-helper)
+[![npm version](https://badge.fury.io/js/%40detools%2Fappium-helper.svg)](https://www.npmjs.com/package/@detools/appium-helper)
+[![Build Status](https://travis-ci.org/detools/appium-helper.svg?branch=master)](https://travis-ci.org/detools/appium-helper)
 
 **Almost zero config helper to run tests with Appium**
 
 ### Installation
 
 ```sh
-npm i tipsi-appium-helper --save-dev
+npm i @detools/appium-helper --save-dev
 ```
 
 ### Usage
@@ -43,7 +43,7 @@ Options:
    // ./__tests__/01_test_title.js
 
    import test from 'tape-async'
-   import helper from 'tipsi-appium-helper'
+   import helper from '@detools/appium-helper'
 
    const { driver, idFromText } = helper
 
@@ -68,7 +68,7 @@ Options:
    Internally `appium-helper` will check if Appium process is running. After that will check if iPhone Simulator is running, if not — will start default `iPhone 6` simulator with the `latest` avialable version of iOS.
 
 ### Playground
-You can run `tipsi-appium-helprer` in playgraund mode. This mode allows you to send command to `appium` via repl using `javascript` language and provides access to `helper` and `driver` instances.
+You can run `detools-appium-helprer` in playgraund mode. This mode allows you to send command to `appium` via repl using `javascript` language and provides access to `helper` and `driver` instances.
 
 To enter in this mode use `--playground` key:
 
@@ -174,7 +174,7 @@ To run unit tests you can use `npm test` command.
 
 MIT License
 
-Copyright (c) 2016 Tipsi
+Copyright (c) 2016-present
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

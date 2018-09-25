@@ -27,7 +27,7 @@ program
 
 require('@babel/polyfill')
 require('@babel/register')({
-  ignore: [/node_modules\/(?!tipsi-appium-helper)/],
+  ignore: [/node_modules\/@detools\/(?!appium-helper)/],
   presets: ['@babel/preset-env'],
   plugins: [
     ['@babel/plugin-proposal-decorators', { legacy: true }],
@@ -49,7 +49,7 @@ require('@babel/register')({
   ],
 })
 
-mockRequire('tipsi-appium-helper', require('..'))
+mockRequire('@detools/appium-helper', require('..'))
 mockRequire('tape', require('tape'))
 
 var configire = require('../src/core/configuration').default

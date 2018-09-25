@@ -1,4 +1,4 @@
-import imgur from 'imgur'
+import imgur from '@detools/imgur'
 
 export default async function () {
   imgur.setClientId(this.config.imgur)

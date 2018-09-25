@@ -1,18 +1,19 @@
 {
-  "name": "tipsi-appium-helper",
-  "version": "3.0.0",
-  "description": "Tipsi Appium Helper",
+  "name": "@detools/appium-helper",
+  "version": "1.0.0",
+  "description": "Appium Helper",
   "main": "src/index.js",
   "bin": {
     "appium-helper": "./bin/appium-helper.js"
   },
   "scripts": {
     "test": "tape -r @babel/register -r @babel/polyfill __tests__/{/,**/,**/**/}*.js | tap-diff",
-    "start": "babel-node ./src"
+    "start": "babel-node ./src",
+    "pub": "npm publish ./ --access=public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tipsi/tipsi-appium-helper.git"
+    "url": "git+https://github.com/detools/appium-helper.git"
   },
   "keywords": [
     "appium",
@@ -22,12 +23,15 @@
     "ios",
     "android"
   ],
-  "author": "Tipsi",
+  "authors": [
+    "Anton Kuznetsov <isnifer@gmail.com> (https://github.com/isnifer)",
+    "Anton Petrov <itsmepetrov@gmail.com> (https://github.com/itsmepetrov)"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tipsi/tipsi-appium-helper/issues"
+    "url": "https://github.com/detools/appium-helper/issues"
   },
-  "homepage": "https://github.com/tipsi/tipsi-appium-helper#readme",
+  "homepage": "https://github.com/detools/appium-helper#readme",
   "peerDependencies": {
     "webdriverio": ">= 4.2 < 5.0"
   },
@@ -53,11 +57,11 @@
     "@babel/plugin-transform-runtime": "7.0.0",
     "@babel/preset-env": "7.0.0",
     "@babel/register": "7.0.0",
+    "@detools/imgur": "^1.0.1",
     "adbkit": "2.11.0",
     "await-repl": "1.0.2",
     "commander": "2.15.1",
     "glob": "7.1.2",
-    "imgur": "0.2.1",
     "lodash": "4.17.5",
     "mock-require": "3.0.2",
     "node-simctl": "3.11.8",
@@ -68,13 +72,16 @@
     "tape": "4.9.0"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.6",
+    "@detools/eslint-config": "^1.0.0",
     "clear-require": "1.0.1",
-    "eslint": "5.4.0",
-    "eslint-config-tipsi": "2.1.1",
+    "eslint": "^5.6.0",
+    "esm": "^3.0.84",
     "nock": "9.2.5",
     "pmock": "0.2.3",
     "tape-plus": "1.0.0",
-    "webdriverio": "4.2.16"
+    "webdriverio": "^4.13.2"
+  },
+  "eslintConfig": {
+    "extends": "@detools/eslint-config"
   }
 }

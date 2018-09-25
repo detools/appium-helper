@@ -4,7 +4,7 @@ export default async function swipe(selector, direction) {
     return this.driver.execute(
       'mobile: scroll',
       { direction: direction < 0 ? 'up' : 'down', element: element.value.ELEMENT }
-     )
+    )
   }
   return this.driver[direction < 0 ? 'swipeDown' : 'swipeUp'](
     selector,
